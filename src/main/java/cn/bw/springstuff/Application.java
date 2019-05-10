@@ -1,5 +1,6 @@
 package cn.bw.springstuff;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
@@ -12,7 +13,7 @@ import org.springframework.context.annotation.ComponentScan;
  * @date: 2019/5/10 09:54
  */
 
-@EnableAutoConfiguration(exclude = DataSourceAutoConfiguration.class)
+//@EnableAutoConfiguration(exclude = DataSourceAutoConfiguration.class)
 @ComponentScan(basePackages = "cn.bw.springstuff")
 @SpringBootApplication
 public class Application {

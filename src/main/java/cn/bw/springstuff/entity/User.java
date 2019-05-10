@@ -2,6 +2,8 @@ package cn.bw.springstuff.entity;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * @description:
  * @auther: bian.wu
@@ -9,10 +11,12 @@ import lombok.Data;
  */
 
 @Data
-public class User {
+public class User implements Serializable {
 
     private long id;
     private String name;
-    
+    private String code;
+    private String dept;
+    private String email;
 
 }
