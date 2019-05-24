@@ -20,6 +20,13 @@
     </select>
 
 
+    <select id="selectUserByName" resultMap="BaseResultMap" parameterType="string">
+        select
+        <include refid="Base_Column_List"/>
+        from user where name = #{name}
+    </select>
+
+
     <insert id="insertUser" parameterType="cn.bw.springstuff.entity.User" useGeneratedKeys="true"
             keyProperty="user.id">
         insert into auth_user (id, user_name, user_code, ele_email, dept) values

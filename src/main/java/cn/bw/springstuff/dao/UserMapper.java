@@ -24,4 +24,6 @@ public interface UserMapper {
 
     void insertUser(User user);
 
+    User selectUserByName(String name);
+
 }

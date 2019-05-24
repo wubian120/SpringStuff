@@ -25,8 +25,13 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void insertUser(User user) {
-
         userMapper.insertUser(user);
-
     }
+
+    @Override
+    public User getUserByName(String name) {
+        return userMapper.selectUserByName(name);
+    }
+
+
 }
