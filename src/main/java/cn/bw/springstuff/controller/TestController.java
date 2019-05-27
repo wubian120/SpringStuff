@@ -29,9 +29,8 @@ public class TestController {
     }
 
     @GetMapping("/name")
-    @Auth
-    public User getUserByName(String name) {
-        User user = userService.getUserByName(name);
+    public User getUserByName(String name,String email) {
+        User user = userService.getUserByName(name,email);
         return user;
     }
 
@@ -41,10 +40,12 @@ public class TestController {
     }
 
     @GetMapping("/admin")
-    @Auth(roleName = {"admin", "Administrator"})
-    public String admin(long id) {
+//    @Auth(roleName = {"admin", "Administrator"})
+    public String admin(long id,String name, String email) {
         log.info("admin --- running");
+
         User admin = userService.getUserById(id);
+
         return admin.getId() + " name: " + admin.getName() + " email: " + admin.getEmail();
     }
 

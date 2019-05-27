@@ -1,6 +1,8 @@
 package cn.bw.springstuff.service;
 
 import cn.bw.springstuff.entity.User;
+import cn.bw.springstuff.utility.Auth;
+import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * @description:
@@ -13,5 +15,6 @@ public interface UserService {
 
     void insertUser(User user);
 
-    User getUserByName(String name);
+
+    User getUserByName(String name,String email);
 }
